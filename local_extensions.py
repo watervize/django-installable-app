@@ -2,7 +2,7 @@ from cookiecutter.utils import simple_filter
 
 
 @simple_filter
-def camelcase_extension(v):
+def camelcase_extension(text):
     s = text.replace("-", " ").replace("_", " ")
     s = s.split()
     if len(text) == 0:
