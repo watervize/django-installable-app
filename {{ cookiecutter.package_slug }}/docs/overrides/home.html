@@ -1,4 +1,4 @@
-{{ "{%" }} extends "main.html" {{ "%}" }}
+{% raw %}{% extends "main.html" %}
 
 {% block extrahead %}
 <link rel="stylesheet" href="assets/stylesheets/home.css" />
@@ -8,14 +8,14 @@
 <section class="mdx-container">
     <div class="mdx-container-hero">
         <div class="mdx-hero">
-            <h1>{{ cookiecutter.package_name }}</h1>
+            {%- endraw %}<h1>{{ cookiecutter.package_name }}</h1>{% raw %}
 
             <h2>{{ config.site_description }}</h2>
         </div>
     </div>
 
     <div class="mdx-content">
-        {{page.content}}
+        {{ page.content }}
     </div>
 </section>
 {% endblock %}
@@ -24,5 +24,5 @@
 {% block disqus %}{% endblock %}
 
 {% block footer %}
-{{ "{%" }} include "partials/footer.html" {{ "%}" }}
-{% endblock %}
+{% include "partials/footer.html" %}
+{% endblock %}{%- endraw %}
