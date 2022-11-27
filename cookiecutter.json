@@ -1,0 +1,21 @@
+{
+    "package_name": "",
+    "package_slug": "{{ cookiecutter.package_name.lower()|replace(' ', '-')|replace('_', '-')|replace('.', '-')|trim() }}",
+    "package_underscored": "{{ cookiecutter.package_slug.replace('-', '_') }}",
+    "description": "",
+    "open_source_license": [
+        "MIT",
+        "BSD",
+        "GPLv3",
+        "Apache Software License 2.0",
+        "None"
+    ],
+    "github_username": "",
+    "author_name": "",
+    "author_email": "",
+    "homepage_url": "",
+    "repository_url": "",
+    "documentation_url": "",
+    "_extensions": ["local_extensions.camelcase_extension"]
+}
+

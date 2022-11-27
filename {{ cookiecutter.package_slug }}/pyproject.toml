@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "{{ cookiecutter.package_slug }}"
+version = "0.1.0"
+description = "{{ cookiecutter.description }}"
+license = "{{ cookiecutter.open_source_license }}"
+authors = ["{{ cookiecutter.author_name }} <{{ cookiecutter.author_email }}>"]
+readme = "README.md"
+{% if not cookiecutter.homepage_url == '' %}homepage = "{{ cookiecutter.homepage_url }}"{%- endif %}
+{% if not cookiecutter.repository_url == '' %}repository = "{{ cookiecutter.repository_url }}"{%- endif %}
+{% if not cookiecutter.documentation_url == '' %}documentation = "{{ cookiecutter.documentation_url }}"{%- endif %}
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Framework :: Django",
+    "Intended Audience :: Developers"
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^4.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
